@@ -1,0 +1,156 @@
+<html>
+<head>
+<title>Bingo</title>
+<style>
+td {
+    font-size: large;
+    text-align: center;
+    width: 30px;
+}
+.colorToggle {
+    background: gray;
+}
+</style>
+<script type="text/javascript" src="jquery-3.2.1.min.js"></script>
+<script>
+    var win_array = new Array();
+    function openWindow(){
+        var w = window.open("display.html");
+	win_array.push(w);
+    }
+    function call(s) {
+	var len = win_array.length;
+	for (var i=0; i < len; i++) {
+		if (!win_array[i].closed)
+			win_array[i].callIt(s);
+	}
+    }
+    function msgIt(s) {
+	var len = win_array.length;
+	for (var i=0; i < len; i++) {
+		win_array[i].msgIt(s);
+	}
+    }
+</script>
+<script>
+$(document).ready(function() {
+  $(".ball").click(function() {
+    $(this).toggleClass('colorToggle');
+  });
+  $("#Clear").click(function() {
+    $(".ball").removeClass('colorToggle');
+  });
+});
+</script>
+</head>
+<body>
+<div>
+<a href="javascript:openWindow();">Open a New Tab</a>
+<br></br>
+<a id="Bingo" href="javascript:call('Bingo')">Bingo</a>
+<br></br>
+</div>
+<table>
+<tr> 
+<td><b>B</b>
+<td><a id="B1" class="ball" href="javascript:call('B 1')">1</a>
+<td><a id="B2" class="ball" href="javascript:call('B 2')">2</a>
+<td><a id="B3" class="ball" href="javascript:call('B 3')">3</a>
+<td><a id="B4" class="ball" href="javascript:call('B 4')">4</a>
+<td><a id="B5" class="ball" href="javascript:call('B 5')">5</a>
+<td><a id="B6" class="ball" href="javascript:call('B 6')">6</a>
+<td><a id="B7" class="ball" href="javascript:call('B 7')">7</a>
+<td><a id="B8" class="ball" href="javascript:call('B 8')">8</a>
+<td><a id="B9" class="ball" href="javascript:call('B 9')">9</a>
+<td><a id="B10" class="ball" href="javascript:call('B 10')">10</a>
+<td><a id="B11" class="ball" href="javascript:call('B 11')">11</a>
+<td><a id="B12" class="ball" href="javascript:call('B 12')">12</a>
+<td><a id="B13" class="ball" href="javascript:call('B 13')">13</a>
+<td><a id="B14" class="ball" href="javascript:call('B 14')">14</a>
+<td><a id="B15" class="ball" href="javascript:call('B 15')">15</a>
+</tr>
+<tr> 
+<td><b>I</b>
+<td><a id="I16" class="ball" href="javascript:call('I 16')">16</a>
+<td><a id="I17" class="ball" href="javascript:call('I 17')">17</a>
+<td><a id="I18" class="ball" href="javascript:call('I 18')">18</a>
+<td><a id="I19" class="ball" href="javascript:call('I 19')">19</a>
+<td><a id="I20" class="ball" href="javascript:call('I 20')">20</a>
+<td><a id="I21" class="ball" href="javascript:call('I 21')">21</a>
+<td><a id="I22" class="ball" href="javascript:call('I 22')">22</a>
+<td><a id="I23" class="ball" href="javascript:call('I 23')">23</a>
+<td><a id="I24" class="ball" href="javascript:call('I 24')">24</a>
+<td><a id="I25" class="ball" href="javascript:call('I 25')">25</a>
+<td><a id="I26" class="ball" href="javascript:call('I 26')">26</a>
+<td><a id="I27" class="ball" href="javascript:call('I 27')">27</a>
+<td><a id="I28" class="ball" href="javascript:call('I 28')">28</a>
+<td><a id="I29" class="ball" href="javascript:call('I 29')">29</a>
+<td><a id="I30" class="ball" href="javascript:call('I 30')">30</a>
+</tr>
+<tr>
+<td><b>N</b>
+<td><a id="N31" class="ball" href="javascript:call('N 31')">31</a>
+<td><a id="N32" class="ball" href="javascript:call('N 32')">32</a>
+<td><a id="N33" class="ball" href="javascript:call('N 33')">33</a>
+<td><a id="N34" class="ball" href="javascript:call('N 34')">34</a>
+<td><a id="N35" class="ball" href="javascript:call('N 35')">35</a>
+<td><a id="N36" class="ball" href="javascript:call('N 36')">36</a>
+<td><a id="N37" class="ball" href="javascript:call('N 37')">37</a>
+<td><a id="N38" class="ball" href="javascript:call('N 38')">38</a>
+<td><a id="N39" class="ball" href="javascript:call('N 39')">39</a>
+<td><a id="N40" class="ball" href="javascript:call('N 40')">40</a>
+<td><a id="N41" class="ball" href="javascript:call('N 41')">41</a>
+<td><a id="N42" class="ball" href="javascript:call('N 42')">42</a>
+<td><a id="N43" class="ball" href="javascript:call('N 43')">43</a>
+<td><a id="N44" class="ball" href="javascript:call('N 44')">44</a>
+<td><a id="N45" class="ball" href="javascript:call('N 45')">45</a>
+</tr>
+<tr>
+<td><b>G</b>
+<td><a id="G46" class="ball" href="javascript:call('G 46')">46</a>
+<td><a id="G47" class="ball" href="javascript:call('G 47')">47</a>
+<td><a id="G48" class="ball" href="javascript:call('G 48')">48</a>
+<td><a id="G49" class="ball" href="javascript:call('G 49')">49</a>
+<td><a id="G50" class="ball" href="javascript:call('G 50')">50</a>
+<td><a id="G51" class="ball" href="javascript:call('G 51')">51</a>
+<td><a id="G52" class="ball" href="javascript:call('G 52')">52</a>
+<td><a id="G53" class="ball" href="javascript:call('G 53')">53</a>
+<td><a id="G54" class="ball" href="javascript:call('G 54')">54</a>
+<td><a id="G55" class="ball" href="javascript:call('G 55')">55</a>
+<td><a id="G56" class="ball" href="javascript:call('G 56')">56</a>
+<td><a id="G57" class="ball" href="javascript:call('G 57')">57</a>
+<td><a id="G58" class="ball" href="javascript:call('G 58')">58</a>
+<td><a id="G59" class="ball" href="javascript:call('G 59')">59</a>
+<td><a id="G60" class="ball" href="javascript:call('G 60')">60</a>
+</tr>
+<tr>
+<td><b>O</b>
+<td><a id="O61" class="ball" href="javascript:call('O 61')">61</a>
+<td><a id="O62" class="ball" href="javascript:call('O 62')">62</a>
+<td><a id="O63" class="ball" href="javascript:call('O 63')">63</a>
+<td><a id="O64" class="ball" href="javascript:call('O 64')">64</a>
+<td><a id="O65" class="ball" href="javascript:call('O 65')">65</a>
+<td><a id="O66" class="ball" href="javascript:call('O 66')">66</a>
+<td><a id="O67" class="ball" href="javascript:call('O 67')">67</a>
+<td><a id="O68" class="ball" href="javascript:call('O 68')">68</a>
+<td><a id="O69" class="ball" href="javascript:call('O 69')">69</a>
+<td><a id="O70" class="ball" href="javascript:call('O 70')">70</a>
+<td><a id="O71" class="ball" href="javascript:call('O 71')">71</a>
+<td><a id="O72" class="ball" href="javascript:call('O 72')">72</a>
+<td><a id="O73" class="ball" href="javascript:call('O 73')">73</a>
+<td><a id="O74" class="ball" href="javascript:call('O 74')">74</a>
+<td><a id="O75" class="ball" href="javascript:call('O 75')">75</a>
+</tr>
+</table>
+<div>
+<br></br>
+<a id="Clear" href="javascript:msgIt('Clear Your Cards')">Clear Your Cards</a>
+<br></br>
+<a id="NewGame" href="javascript:msgIt('New Game')">New Game</a>
+<br></br>
+<a id="CoverAll" href="javascript:msgIt('Cover All')">Cover All</a>
+<br></br>
+<a id="Final" href="javascript:msgIt('Residents Only')">Residents Only</a>
+</div>
+</body>
+</html>

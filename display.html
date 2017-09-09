@@ -1,0 +1,35 @@
+<html>
+<head>
+<title>Bingo</title>
+<style>
+#call {
+  height: 100%;
+  width: 100%;
+  background: eggshell;
+  text-align: center;
+  font-family: Tahoma;
+}
+</style>
+<script type="text/javascript">
+window.onload = function() {
+  var fontSize = window.call.offsetHeight * .80;
+  window.call.style.fontSize = fontSize + "px";
+}
+window.callIt = function(s) {
+  var fontSize = window.call.offsetHeight * .80;
+  window.call.style.fontSize = fontSize + "px";
+  window.call.innerText = s;
+}
+window.msgIt = function(s) {
+  var fontSize = window.call.offsetHeight * .40;
+  window.call.style.fontSize = fontSize + "px";
+  window.call.innerText = s;
+}
+</script>
+</head>
+<body>
+<div id="call">
+Bingo
+</div>
+</body>
+</html>
